@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivo Invadido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 10px;
+        }
+        .alerta {
+            font-size: 2em;
+            font-weight: bold;
+            animation: piscar 0.8s infinite alternate;
+        }
+        p {
+            font-size: 1.2em;
+            color: white;
+            margin-top: 10px;
+        }
+        @keyframes piscar {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="alerta">🚨 SEU DISPOSITIVO FOI INVADIDO 🚨</h1>
+    <p>Aguarde... rastreando localização...</p>
+    <script>
+        setTimeout(() => {
+            document.body.innerHTML = "<h1 style='color:lime; text-align:center;'>SISTEMA COMPROMETIDO</h1><p style='color:white; text-align:center;'>Todos os seus dados foram coletados!</p>";
+        }, 5000);
+    </script>
+</body>
+</html>
